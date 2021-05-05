@@ -89,5 +89,4 @@ $RECYCLE.BIN/
 
 # Custom
 *.ps1
-/certificates/*
 *.zip
