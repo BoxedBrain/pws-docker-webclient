@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   passwordsafe:
     container_name: PasswordSafe
@@ -7,6 +6,6 @@ services:
         context: .
         args:
             - PWS_SERVER=10.1.50.222 # Password Safe application server
-    ports: 
+    ports:
         - "80:80"
         - "443:443"
