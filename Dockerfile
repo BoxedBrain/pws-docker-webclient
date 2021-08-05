@@ -6,9 +6,11 @@ ARG PWS_SERVER=passwordsafe
 
 WORKDIR $APP_HOME
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
     unzip \
-    sed
+    sed \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 RUN sed -i "s/%PWS_SERVER%/${PWS_SERVER}/g" /etc/nginx/conf.d/default.conf
