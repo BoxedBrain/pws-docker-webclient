@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:1.20
 
 ENV APP_HOME=/app
 RUN mkdir -p ${APP_HOME}
