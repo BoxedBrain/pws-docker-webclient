@@ -6,7 +6,7 @@ services:
     build:
         context: .
         args:
-            - PWS_SERVER=${PWS_SERVER} # Password Safe application server
+            - PWS_SERVER=10.1.50.222 # Password Safe application server
     ports: 
         - "80:80"
         - "443:443"
